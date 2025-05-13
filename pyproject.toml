@@ -1,0 +1,27 @@
+[project]
+name = "higurashi-anki"
+version = "0.1.0"
+description = "Convert Higurashi script files into Anki cards"
+authors = [
+    {name = "cynumini", email = "cynumini@proton.me"},
+]
+dependencies = ["click>=8.2.0", "rich>=14.0.0"]
+requires-python = ">=3.13"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[project.scripts]
+higurashi-anki = "higurashi_anki.__main__:main"
+
+[dependency-groups]
+dev = [
+    "basedpyright>=1.29.1",
+    "ruff>=0.11.9",
+]
